@@ -1,5 +1,5 @@
 {
-  "name": "EDUinsure",
+  "name": "fortifi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,6 @@
     "@reown/appkit": "^1.7.2",
     "@reown/appkit-adapter-wagmi": "^1.7.2",
     "@tanstack/react-query": "^5.72.0",
-    "chai": "^5.1.1",
     "connectkit": "^1.9.0",
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.445.0",
@@ -36,6 +35,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "chai": "^4.3.7",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "hardhat": "^2.22.19",
