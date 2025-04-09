@@ -34,7 +34,7 @@ const PoolContainers = () => {
     })
     const {write,isSuccess} = usePoolWrite();
 
-    console.log(totalLiquidity);
+    console.log(Number(totalLiquidity)/10**18);
 
     useEffect(()=>{
       setTotalPoolSize(Number(totalLiquidity)/10**18);
@@ -42,6 +42,7 @@ const PoolContainers = () => {
       setUserRewards(Number(poolRewards)/10**18)
     },[totalLiquidity,providerBalance,isSuccess,poolRewards])
    
+    console.log(totalLiquidity);
 
     
   const handleDeposit = () => {
@@ -117,7 +118,7 @@ const PoolContainers = () => {
               >
                 <PoolInfoCard
                   title="Total Insurance Pool"
-                  value={`${totalPoolSize.toLocaleString()} XFI`}
+                  value={`${totalPoolSize.toFixed(5)} EDU`}
                 />
               </motion.div>
               <motion.div
@@ -126,7 +127,7 @@ const PoolContainers = () => {
               >
                 <PoolInfoCard
                   title="Your Staked Amount"
-                  value={`${userStaked.toLocaleString()} XFI`}
+                  value={`${userStaked.toFixed(5)} EDU`}
                 />
               </motion.div>
             </motion.div>

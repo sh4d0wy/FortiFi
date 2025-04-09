@@ -1,4 +1,4 @@
- ## XFI-Insure
+ ## EDU-Insure
 
  deployed on CrossFi:  
  SafeToken : 0xDF933Cd647f69198D44cC0C6e982568534546f33  

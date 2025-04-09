@@ -130,12 +130,12 @@ export default function ViewDetail({policyId}:{policyId:number}) {
                 <DetailItem 
                   icon={<DollarSign className="text-green-400 h-6 w-6" />}
                   label="Coverage Amount"
-                  value={`${Number(BigInt(policy[4]))/10**18} XFI`}
+                  value={`${Number(BigInt(policy[4]))/10**18} EDU`}
                 />
                 <DetailItem 
                   icon={<DollarSign className="text-yellow-400 h-6 w-6" />}
                   label="Premium"
-                  value={`${(Number(BigInt(policy[5]))/10**18).toFixed(4)} XFI`}
+                  value={`${(Number(BigInt(policy[5]))/10**18).toFixed(4)} EDU`}
                 />
                 <DetailItem 
                   icon={<Calendar className="text-blue-400 h-6 w-6" />}

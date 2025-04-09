@@ -87,11 +87,11 @@ export default function MyPolicyCard({policyId}:{policyId:number}) {
           </p>
           <p className="flex justify-between">
             <span className="text-blue-400">Coverage:</span> 
-            <span className="text-blue-300">{Number(BigInt(policy[4]))/10**18} XFI</span>
+            <span className="text-blue-300">{Number(BigInt(policy[4]))/10**18} EDU</span>
           </p>
           <p className="flex justify-between">
             <span className="text-blue-400">Premium:</span> 
-            <span className="text-blue-300">{(Number(BigInt(policy[5]))/10**18).toFixed(5)} XFI</span>
+            <span className="text-blue-300">{(Number(BigInt(policy[5]))/10**18).toFixed(5)} EDU</span>
           </p>
           <p className="flex justify-between">
             <span className="text-blue-400">Creator:</span> 

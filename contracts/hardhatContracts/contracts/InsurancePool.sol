@@ -64,7 +64,7 @@ contract InsurancePool is IInsurancePool, Ownable {
             require(safeToken.transfer(msg.sender, rewards), "Transfer failed");
             (bool success,) = payable(msg.sender).call{value: rewards}("");
             if(!success){
-                revert("XFI Tokens transfer failed");
+                revert("EDU Tokens transfer failed");
             }
             emit RewardsClaimed(msg.sender, rewards);
         }
