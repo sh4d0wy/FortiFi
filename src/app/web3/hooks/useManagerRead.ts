@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
-import { managerPolygonAddress, PolicyManagerAddress, safeTokenAddress } from '../Addresses'
+import { PolicyManagerAddress, safeTokenAddress } from '../Addresses'
 import { PolicyMaangerAbi, safeTokenAbi } from '../Abi'
 import { getContract } from "thirdweb";
 import { defineChain } from "thirdweb";

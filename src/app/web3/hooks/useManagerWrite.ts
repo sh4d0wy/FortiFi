@@ -1,5 +1,5 @@
 import { useWriteContract } from "wagmi"
-import { managerPolygonAddress, PolicyManagerAddress, poolPolygonAddress } from "../Addresses";
+import { PolicyManagerAddress,  poolPolygonAddress } from "../Addresses";
 import { InsurancePoolAbi, PolicyMaangerAbi } from "../Abi";
 
 export const useManagerWrite = ()=>{

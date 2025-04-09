@@ -4,7 +4,7 @@ import { PoolInfoCard } from './PoolCards';
 import { usePoolRead } from '../web3/hooks/usePoolRead';
 import { useAccount, useWatchContractEvent, useWriteContract } from 'wagmi';
 import { usePoolWrite } from '../web3/hooks/usePoolWrite';
-import { poolPolygonAddress } from '../web3/Addresses';
+import { InsurancePoolAddress, poolPolygonAddress} from '../web3/Addresses';
 import { InsurancePoolAbi } from '../web3/Abi';
 import { parseEther } from 'viem';
 import toast from 'react-hot-toast';
@@ -46,6 +46,7 @@ const PoolContainers = () => {
 
     
   const handleDeposit = () => {
+    console.log(parseEther(depositAmount))
     write({
         functionName: "provideLiquidity",
         args: [],
@@ -55,7 +56,7 @@ const PoolContainers = () => {
 
 
     useWatchContractEvent({
-      address:poolPolygonAddress,
+      address:InsurancePoolAddress,
       abi:InsurancePoolAbi,
       eventName: "LiquidityProvided",
       onLogs(logs){
@@ -63,7 +64,7 @@ const PoolContainers = () => {
       }
     })
     useWatchContractEvent({
-      address:poolPolygonAddress,
+      address:InsurancePoolAddress,
       abi:InsurancePoolAbi,
       eventName: "LiquidityWithdrawn",
       onLogs(logs){

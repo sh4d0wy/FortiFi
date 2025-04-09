@@ -6,7 +6,7 @@ import { Shield, DollarSign, Calendar, Umbrella,NotebookPen } from 'lucide-react
 import { useManagerWrite } from '../web3/hooks/useManagerWrite'
 import { parseEther } from 'viem'
 import { useWatchContractEvent } from 'wagmi'
-import { managerPolygonAddress } from '../web3/Addresses'
+import { PolicyManagerAddress} from '../web3/Addresses'
 import { PolicyMaangerAbi } from '../web3/Abi'
 import toast from 'react-hot-toast'
 
@@ -39,7 +39,7 @@ export default function CreatePolicy() {
   }
 
   useWatchContractEvent({
-    address:managerPolygonAddress,
+    address:PolicyManagerAddress,
     abi:PolicyMaangerAbi,
     eventName:"PolicyCreated",
     onLogs(){

@@ -4,7 +4,7 @@ import { useManagerWrite } from "../web3/hooks/useManagerWrite";
 import toast, { ToastBar } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { useAccount, useWatchContractEvent } from "wagmi";
-import { managerPolygonAddress } from "../web3/Addresses";
+import { PolicyManagerAddress } from "../web3/Addresses";
 import { PolicyMaangerAbi } from "../web3/Abi";
 import { useManagerRead } from "../web3/hooks/useManagerRead";
 import Link from "next/link";
@@ -59,7 +59,7 @@ export default function PolicyCard({policyId}:{policyId:number}) {
   },[data,flag,policy,addressToPolicy])
 
   useWatchContractEvent({
-    address:managerPolygonAddress,
+    address:PolicyManagerAddress,
     abi:PolicyMaangerAbi,
     eventName:"PolicyPurchased",
     onLogs:(logs)=>{
@@ -70,7 +70,7 @@ export default function PolicyCard({policyId}:{policyId:number}) {
   })
   
   useWatchContractEvent({
-    address:managerPolygonAddress,
+    address:PolicyManagerAddress,
     abi:PolicyMaangerAbi,
     eventName:"PremiumPaid",
     onLogs:(logs)=>{
