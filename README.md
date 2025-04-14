@@ -62,8 +62,8 @@ graph TD
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/fortifi.git
-cd fortifi
+git clone https://github.com/sh4d0wy/FortiFi.git
+cd FortiFi
 ```
 
 2. Install dependencies:
@@ -73,8 +73,7 @@ npm install
 
 3. Set up environment variables:
 ```bash
-cp .env.example .env.local
-# Edit .env.local with your configuration
+cp .env.example
 ```
 
 4. Run the development server:
